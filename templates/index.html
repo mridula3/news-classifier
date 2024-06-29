@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Classifier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #cea5a5;
+            color: #010101;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;  
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s;
+            color: rgb(5, 80, 117);
+        }
+
+        form {
+            background-color: #d0c4c9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+            font-weight: bold;
+            height: 400px;
+            width: 600px;
+            margin: auto
+
+        }
+
+        input[type="text"], textarea {
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+            padding: 05px;
+            margin-bottom: 20px;
+            border: 1.5px solid #848080;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea{
+            height: 80px;
+        }
+
+        input[type="submit"] {
+            background-color: #266394;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #7094c7;
+        }
+#disclaimer{
+    color: red;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+        /* p {
+            font-size: 20px;
+            margin-top: 30px;
+            animation: fadeInUp 1s;
+        } */
+    </style>
+</head>
+<body>
+    <h1 class="animate__animated">News Classifier</h1>
+    <form method="post" class="animate__animated">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="text">Text:</label>
+        <textarea id="text" name="text" required></textarea><br><br>
+        <!-- <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br> -->
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br><p id="disclaimer">Disclaimer: This model is trained using dataset containing only political and world news of USA from 2016-2017</p>
+    <!-- {% if result %}
+    <p class="animate__animated">{{ result }}</p>
+    {% endif %} -->
+</body>
+</html>
